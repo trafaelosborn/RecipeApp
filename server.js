@@ -20,7 +20,10 @@ app.use(express.json());
 	})
 	.then(() => console.log("mongodb connected"))
 	.catch(err => console.log(err)); */
-
+if (process.env.NODE_ENV === "production") {
+	// Set static folder
+	app.use(express.static("client/build"));
+}
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recipedb");
 
 // use routes
@@ -29,9 +32,6 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/recipes", require("./routes/recipes"));
 
 // Server static assets if we're in production
-if (process.env.NODE_ENV === "production") {
-	// Set static folder
-	app.use(express.static("client/build"));
-}
+
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
