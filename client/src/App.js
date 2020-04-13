@@ -12,17 +12,18 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<Switch>
-					{/* <Route exact path="/" component={Signin} /> */}
-					{/* <Route exact path="/signup" component={Signup} />
+
+				{/* <Route exact path="/" component={Signin} /> */}
+				{/* <Route exact path="/signup" component={Signup} />
 					<Route exact path="/search" component={Search} />
 					<Route exact path="/profile" component={Profile} />
 					<Route exact path="/RecipePage/:id" component={RecipePage} />
 					<Route exact path="/createrecipe" component={CreateRecipe} />  */}
-					<Route exact path="/test" component={Test} />
-				</Switch>
+				<Route exact path="/test"  >
+					<Test />
+				</Route>
 			</div>
-		</Router> 
+		</Router>
 	);
 }
 
