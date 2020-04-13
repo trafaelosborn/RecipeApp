@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://dbUser:Hamburger5@pubgithub-aqd38.mongodb.net/recipedb?retryWrites=true&w=majority",
+    "jwtSecret": "sl_myJwtSecret"
+}
